@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        /* // Regular JavaScript Function
+        function addNumber(num1 , num2) { // num1 and num2 is the parameters
+            return num1 + num2;
+        }
+
+        console.log(addNumber(5, 6)) // Function Calling */
+
+        /* function findFactorial(num) {
+            let factorial = 1
+            for (let i = num; i > 0; i--) {
+                factorial *= i
+                console.log(factorial)
+            }
+            return factorial
+        }
+        
+        console.log(findFactorial(5)) // 120 */
+
+        // function sumArray(arr) {
+        //     console.log("Original Array: ", arr)
+        //     if (arr.length === 0) return 0; // Base case
+        //     console.log("Sliced Array: ", arr)
+        //     return arr[0] + sumArray(arr.slice(1)); // Recursive call
+        // }
+        
+        // console.log(sumArray([1, 2, 3, 4, 5, 6])); // 10
+
+
+        function flattenArray(arr) {
+            let result = [];
+            console.log(arr)
+            arr.forEach(item => {
+                console.log(`Mapped: ${item}`)
+            if (Array.isArray(item)) {
+                console.log(`Array ${arr}`)
+                result = result.concat(flattenArray(item)); // Recursive call
+                
+                console.log(`Array ${arr}`)
+            } else {
+                result.push(item); // insert to the result 
+            }
+        });
+            return result;
+        }
+        console.log(flattenArray([1, [2, [3, 4]], 5]));
+    </script>
+</body>
+</html>
